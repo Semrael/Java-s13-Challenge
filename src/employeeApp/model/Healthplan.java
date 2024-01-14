@@ -3,6 +3,7 @@ package employeeApp.model;
 import employeeApp.enums.Plan;
 
 public class Healthplan {
+    //instance variable
     private int id;
     private String name;
     private Plan plan;//Alt + enter ile import class yaptım

@@ -72,13 +72,22 @@ public class Employee {
         }
         else{
             try {
-                if(healthPlans[index]==null){
-                    this.healthPlans[index]=name;
-                }
-                else{
-                    System.out.println("İlgili index doludur."+index);
-                }
-
+                boolean isExist=false;
+               for(String healthplan:healthPlans){
+                   if(healthplan!= null && healthplan.equals((name))){
+                       isExist=true;
+                       System.out.println(name+"healtplans içerisinde vardır.");
+                       break;
+                   }
+               }
+               if(!isExist){
+                   if(healthPlans[index]==null){
+                       this.healthPlans[index]=name;
+                   }
+                   else{
+                       System.out.println("İlgili index doludur."+index);
+                   }
+               }
             }
             catch (ArrayIndexOutOfBoundsException ex){
                 System.out.println("Invalid index:" +index);
